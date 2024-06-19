@@ -7,7 +7,6 @@ from django.template.defaultfilters import slugify
 # Create your models here.
 class Blog(models.Model):
     name = models.CharField(max_length=100)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.TextField()
     post_date = models.DateField(default=date.today)
     is_public = models.BooleanField(default=True)
